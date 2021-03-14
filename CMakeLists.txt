@@ -13,3 +13,5 @@ endif()
 
 add_subdirectory(first_example)
 add_subdirectory(teapot_example)
+add_subdirectory(point_example)
+add_subdirectory(triangle_example)

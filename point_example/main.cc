@@ -1,6 +1,8 @@
-#define GL_SILENCE_DEPRECATION
 #ifdef _WIN32
 #include <GL/glut.h>
+#elif __APPLE__
+#define GL_SILENCE_DEPRECATION
+#include <GLUT/glut.h>
 #else
 #include <GLUT/glut.h>
 #endif

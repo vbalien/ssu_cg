@@ -9,8 +9,6 @@ if (WIN32)
   set(GLUT_ROOT_PATH "${EXTERNAL_PATH}/freeglut")
   set(GLUT_INCLUDE_DIRS "${EXTERNAL_PATH}/freeglut/include")
   set(OPENGL_LIBRARY_DIR "${EXTERNAL_PATH}/freeglut/lib/x64")
-  file(COPY "${EXTERNAL_PATH}/freeglut/bin/x64/freeglut.dll" DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-  file(COPY "${EXTERNAL_PATH}/freeglut/bin/x64/freeglut.dll" DESTINATION ${CMAKE_BINARY_DIR}/Release)
 endif()
 
 add_subdirectory(first_example)

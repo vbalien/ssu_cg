@@ -4,11 +4,15 @@ project(ssu_cg)
 
 set(EXTERNAL_PATH "${CMAKE_CURRENT_SOURCE_DIR}/external")
 
-# Win32 Support
+# Windows Support
 if (WIN32)
   set(GLUT_ROOT_PATH "${EXTERNAL_PATH}/freeglut")
   set(GLUT_INCLUDE_DIRS "${EXTERNAL_PATH}/freeglut/include")
-  set(OPENGL_LIBRARY_DIR "${EXTERNAL_PATH}/freeglut/lib/x64")
+  if("${CMAKE_VS_PLATFORM_NAME}" MATCHES "x64")
+    set(OPENGL_LIBRARY_DIR "${EXTERNAL_PATH}/freeglut/lib/x64")
+  else()
+    set(OPENGL_LIBRARY_DIR "${EXTERNAL_PATH}/freeglut/lib")
+  endif()
 endif()
 
 add_subdirectory(first_example)
